@@ -51,3 +51,21 @@
 - 移除: .gitmodules, javis_projects (submodule)
 - 新增: skills/, memory/knowledge_base/, tools/automation/
 - 修改: 所有相关文档
+
+---
+
+### 2026-01-31 - 项目版本管理配置
+
+**目标**: 确保每个项目都有独立的 git 版本管理
+
+**完成的工作**:
+- 更新 javis_projects/.gitignore 忽略子项目的 .git 目录
+- 更新 javis_projects/README.md 说明版本管理策略
+- 创建基本项目模板 (templates/basic/)
+- 添加模板使用说明
+- 更新工作区文档
+
+**版本管理策略**:
+- javis_projects 目录有自己的 git 仓库（追踪目录结构、模板、文档）
+- 每个子项目独立 git 仓库（.git 被父目录的 .gitignore 忽略）
+- 项目之间完全独立的版本控制

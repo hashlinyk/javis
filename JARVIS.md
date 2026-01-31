@@ -67,11 +67,31 @@ F:\javis_projects/                 # 独立的项目管理目录（外部，独�
 3. 学习最佳实践 → 记录到 memory/best_practices/
 4. 重要经验教训 → 记录到 memory/experiences/
 
-### 项目管理
+#### 项目管理
 1. 通过 `javis_projects/` 符号链接访问项目目录
 2. 新项目创建在 `F:\javis_projects/active/` 中
-3. 每个项目独立 git 仓库，不与工作区混在一起
-4. 完成后移动到 `F:\javis_projects/archive/` 中
+3. 每个项目独立 git 仓库，不与 javis_projects 主仓库混在一起
+4. javis_projects 的 .gitignore 忽略所有子项目的 .git 目录
+5. 完成后移动到 `F:\javis_projects/archive/` 中
+
+#### 创建新项目
+```bash
+cd javis_projects/active
+mkdir my-project
+cd my-project
+git init
+# 添加文件并提交...
+```
+
+#### 使用模板创建项目
+```bash
+cp -r javis_projects/templates/basic javis_projects/active/my-project
+cd javis_projects/active/my-project
+rm README_TEMPLATE.md
+git init
+git add .
+git commit -m "初始提交"
+```
 
 ## 成长指标
 
