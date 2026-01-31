@@ -36,6 +36,7 @@ knowledge_base/
 | 模式 | 文件 | 描述 |
 |------|------|------|
 | 配置驱动设计 | config_driven_design.md | 通过配置文件控制应用行为的设计模式 |
+| 项目启动流程 | solution_patterns/project_setup_workflow.md | 新项目创建和 git submodule 集成的标准流程 |
 
 ## 最佳实践 (best_practices/)
 
@@ -70,6 +71,8 @@ knowledge_base/
 | 路径变量 | memory/patterns/config_driven_design.md |
 | 架构演进 | memory/experiences/architecture_evolution.md |
 | 经验教训 | memory/experiences/architecture_evolution.md |
+| 项目启动 | memory/patterns/solution_patterns/project_setup_workflow.md |
+| GitHub 仓库 | memory/patterns/solution_patterns/project_setup_workflow.md |
 
 ## 最近更新
 
@@ -77,6 +80,7 @@ knowledge_base/
 - **2026-01-31**: 添加配置驱动设计模式
 - **2026-01-31**: 添加工作区设置最佳实践
 - **2026-01-31**: 添加架构演进经验记录
+- **2026-01-31**: 添加项目启动工作流程
 
 ---
 *最后更新: 2026-01-31*

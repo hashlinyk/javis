@@ -25,7 +25,10 @@
       "Bash(git submodule status:*)",
       "Bash(readlink:*)",
       "Bash(find:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "WebSearch",
+      "Bash(git -C F:/javis_projects/active submodule status)",
+      "Bash(git checkout:*)"
     ]
   }
 }

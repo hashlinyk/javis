@@ -34,6 +34,8 @@
 | `#design-pattern` | 设计模式 | config_driven_design.md |
 | `#configuration` | 配置管理 | config_driven_design.md, workspace_setup.md |
 | `#flexibility` | 灵活性设计 | config_driven_design.md |
+| `#workflow` | 工作流程 | project_setup_workflow.md |
+| `#github` | GitHub 平台 | project_setup_workflow.md |
 
 ### 最佳实践标签
 
@@ -71,6 +73,7 @@
 | 配置 | `#configuration`, `#design-pattern` | config_driven_design.md |
 | 最佳实践 | `#best-practices`, `#maintenance` | workspace_setup.md |
 | 经验 | `#experience`, `#lessons-learned` | architecture_evolution.md |
+| 项目启动 | `#workflow`, `#github` | project_setup_workflow.md |
 
 ---
 *最后更新: 2026-01-31*

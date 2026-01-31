@@ -110,3 +110,39 @@
 - 配置文件驱动，无硬编码路径
 - 路径变量支持环境适配
 - 使用 pathlib 确保跨平台兼容
+
+---
+
+### 2026-01-31 - 婚后模拟器项目启动
+
+**目标**: 启动婚后模拟器游戏开发项目
+
+**完成的工作**:
+- 创建 GitHub 私有仓库 `hashlinyk/marriage-simulator`
+- 添加为 git submodule 到 `javis_projects/active/`
+- 初始化 Godot 4.x 项目结构
+- 实现核心系统脚本 (game_state, resource_manager, character, event_system)
+- 创建基础场景 (main_menu, character_select, game_hud)
+- 添加事件和角色数据模板
+
+**重要决策**:
+- 使用 Godot 4.x 作为游戏引擎
+- 采用数据驱动设计，事件数据存储在 JSON
+- 单例模式管理游戏状态
+- 模块化架构，便于扩展和 DLC
+
+**新增知识**:
+- 项目启动工作流程 (`memory/patterns/solution_patterns/project_setup_workflow.md`)
+
+**架构设计**:
+```
+marriage-simulator/
+├── scenes/              # 场景文件
+├── scripts/             # 游戏脚本
+│   ├── core/           # 核心系统
+│   └── ui/             # UI脚本
+├── data/               # 游戏数据（JSON）
+│   ├── events/         # 事件数据
+│   └── characters/     # 角色数据
+└── addons/             # Godot 插件
+```
