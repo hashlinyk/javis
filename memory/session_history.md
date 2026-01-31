@@ -26,3 +26,28 @@
 **待跟进**:
 - 补充用户偏好信息
 - 建立知识分类体系
+
+---
+
+### 2026-01-31 - 工作区架构优化
+
+**目标**: 修复设计问题，完善架构
+
+**完成的工作**:
+- 移除 git submodule，改用外部引用
+- 创建 skills/ 目录用于管理 Agent Skills
+- 建立知识库索引系统 (memory/knowledge_base/)
+- 移动原始文档到 F:\javis_projects\references\
+- 添加记忆备份脚本 (tools/automation/memory_backup.py)
+- 更新所有文档以反映新的架构
+
+**重要决策**:
+- javis_projects 作为外部目录，不在工作区 git 仓库中
+- 使用 knowledge_base/ 提供快速检索能力
+- skills/ 目录专门管理 Agent Skills
+- 原始文档移动到 javis_projects/references/ 避免重复
+
+**架构变更**:
+- 移除: .gitmodules, javis_projects (submodule)
+- 新增: skills/, memory/knowledge_base/, tools/automation/
+- 修改: 所有相关文档

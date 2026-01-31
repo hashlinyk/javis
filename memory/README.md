@@ -7,7 +7,10 @@
 ```
 memory/
 ├── README.md              # 本文件 - 记忆模块说明
-├── knowledge_base.md      # 知识库索引
+├── knowledge_base/        # 知识库索引系统
+│   ├── README.md
+│   ├── index.md          # 知识库主索引
+│   └── tags.md           # 标签系统
 ├── user_preferences.md    # 用户偏好设置
 ├── session_history.md     # 会话历史摘要
 ├── domain/                # 领域专业知识
