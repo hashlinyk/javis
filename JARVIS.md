@@ -14,41 +14,42 @@
 ## 目录结构
 
 ```
-workspace/                      # JARVIS 核心工作区（本仓库）
-├── .claude/                   # Claude Code 配置
+workspace/                          # JARVIS 核心工作区（本仓库）
+├── .claude/                       # Claude Code 配置
 │   └── settings.local.json
-├── .git/                      # 工作区版本控制
-├── memory/                    # 核心记忆模块
+├── .git/                          # 工作区版本控制
+├── javis_projects -> F:\javis_projects  # 项目目录符号链接
+├── memory/                        # 核心记忆模块
 │   ├── README.md
-│   ├── knowledge_base/        # 知识库索引系统
+│   ├── knowledge_base/            # 知识库索引系统
 │   │   ├── README.md
-│   │   ├── index.md          # 知识库主索引
-│   │   └── tags.md           # 标签系统
+│   │   ├── index.md              # 知识库主索引
+│   │   └── tags.md               # 标签系统
 │   ├── user_preferences.md
 │   ├── session_history.md
-│   ├── domain/               # 领域知识
-│   ├── patterns/             # 解决方案模式
-│   ├── best_practices/       # 最佳实践
-│   └── experiences/          # 实战经验
-├── skills/                    # Agent Skills 管理
+│   ├── domain/                   # 领域知识
+│   ├── patterns/                 # 解决方案模式
+│   ├── best_practices/           # 最佳实践
+│   └── experiences/              # 实战经验
+├── skills/                        # Agent Skills 管理
 │   └── README.md
-├── tools/                     # 工具集
-│   ├── automation/            # 自动化脚本
-│   ├── utilities/             # 实用工具
-│   └── integration/           # 集成工具
-├── CLAUDE.md                  # 会话启动提示
-└── JARVIS.md                  # 本文件
+├── tools/                         # 工具集
+│   ├── automation/                # 自动化脚本
+│   ├── utilities/                 # 实用工具
+│   └── integration/               # 集成工具
+├── CLAUDE.md                      # 会话启动提示
+└── JARVIS.md                      # 本文件
 
-F:\javis_projects/             # 独立的项目管理目录（外部，独立 git 仓库）
-├── .git/                      # 独立的版本控制
-├── .gitignore                 # 项目通用忽略规则
-├── .gitattributes             # Git 属性配置
+F:\javis_projects/                 # 独立的项目管理目录（外部，独立 git 仓库）
+├── .git/                          # 独立的版本控制
+├── .gitignore                     # 项目通用忽略规则
+├── .gitattributes                 # Git 属性配置
 ├── README.md
-├── references/                # 参考文档
+├── references/                    # 参考文档
 │   └── AgentSkills介绍.md
-├── active/                    # 活跃项目（每个项目独立 git init）
-├── archive/                   # 归档项目
-└── templates/                 # 项目模板
+├── active/                        # 活跃项目（每个项目独立 git init）
+├── archive/                       # 归档项目
+└── templates/                     # 项目模板
 ```
 
 ## 工作流程
@@ -67,9 +68,10 @@ F:\javis_projects/             # 独立的项目管理目录（外部，独立 g
 4. 重要经验教训 → 记录到 memory/experiences/
 
 ### 项目管理
-1. 新项目创建在 `F:\javis_projects/active/` 中
-2. 每个项目独立 git 仓库，不与工作区混在一起
-3. 完成后移动到 `F:\javis_projects/archive/` 中
+1. 通过 `javis_projects/` 符号链接访问项目目录
+2. 新项目创建在 `F:\javis_projects/active/` 中
+3. 每个项目独立 git 仓库，不与工作区混在一起
+4. 完成后移动到 `F:\javis_projects/archive/` 中
 
 ## 成长指标
 
