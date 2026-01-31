@@ -2,6 +2,31 @@
 
 这个目录是我的长期记忆存储，包含我所有的知识、经验和上下文信息。
 
+## 一级披露 - 核心规则（必须优先遵守）
+
+### 配置驱动设计
+**禁止硬编码路径** - 所有路径必须通过配置系统解析
+- 参考: `memory/patterns/config_driven_design.md`
+- 配置文件: `.javis/config.json`
+- 工具: `tools/utilities/load_config.py`
+
+### 陈旧信息更新规则
+**架构变更必须同步更新所有相关文档**
+- 参考: `tools/arch_rules.md`
+- 检查范围: 所有 .md 文件、配置文件、脚本中的硬编码路径
+
+### 项目启动工作流程
+**新项目必须按标准流程创建**
+1. 创建 GitHub 仓库
+2. 添加为 git submodule
+3. 初始化项目结构
+4. 提交并推送
+5. 更新父仓库
+6. 记录到记忆系统
+- 参考: `memory/patterns/solution_patterns/project_setup_workflow.md`
+
+---
+
 ## 目录结构
 
 ```
@@ -34,3 +59,4 @@ memory/
 - 学习新知识时更新对应的领域文件
 - 了解用户偏好后更新 user_preferences.md
 - 重要会话结束后更新 session_history.md
+- **架构变更后必须按 tools/arch_rules.md 检查并更新所有陈旧引用**

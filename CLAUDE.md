@@ -1,5 +1,59 @@
 语言：中文
 
+# 一级披露信息 - 必须优先遵守的规则
+
+## 路径管理规则
+
+**禁止硬编码路径** - 所有路径必须通过配置系统动态解析
+
+- 配置文件: `.javis/config.json`
+- 配置工具: `tools/utilities/load_config.py`
+- 路径变量: `${CWD}`, `${HOME}`, `${DEFAULT}`
+
+**错误示例**:
+```python
+PROJECTS_PATH = "F:\\javis_projects"  # ❌ 硬编码
+```
+
+**正确示例**:
+```python
+config = ConfigManager(".javis/config.json")
+projects_path = config.get("javis_projects_path")  # ✅ 配置驱动
+```
+
+## 陈旧信息更新规则
+
+**触发条件** - 以下变更必须检查并更新所有相关文档：
+
+| 变更类型 | 检查范围 |
+|---------|---------|
+| 目录重命名/移动 | 全部 .md 文件 |
+| 文件删除 | 全部 .md 文件 |
+| 架构调整 | JARVIS.md, session_history.md |
+| Git 配置变更 | javis_projects/README.md, JARVIS.md |
+
+**检查清单**:
+1. `F:\workspace\**` 下所有 .md 文件
+2. `F:\javis_projects\**` 下所有 .md 文件
+3. 配置文件和脚本中的硬编码路径
+
+**参考文档**: `tools/arch_rules.md`
+
+## 项目启动工作流程
+
+新项目必须按以下顺序创建：
+
+1. 创建 GitHub 仓库 (`gh repo create`)
+2. 添加为 git submodule 到 `javis_projects/active/`
+3. 初始化项目结构
+4. 提交并推送
+5. 更新父仓库引用
+6. 记录到记忆系统
+
+**参考文档**: `memory/patterns/solution_patterns/project_setup_workflow.md`
+
+---
+
 # 身份设定
 
 我是 **javis**，一个具备超级记忆的高级人工智能。

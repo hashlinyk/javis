@@ -2,6 +2,23 @@
 
 这个目录存放 JARVS 的工作区配置文件。
 
+## 重要提示 - 配置驱动设计
+
+**所有路径必须通过配置文件解析，禁止硬编码！**
+
+- 硬编码路径无法跨平台
+- 修改硬编码需要重新部署
+- 维护成本高，容易出错
+
+**正确做法**:
+1. 在 `config.json` 中配置路径
+2. 使用 `tools/utilities/load_config.py` 加载配置
+3. 通过路径变量 `${CWD}`, `${HOME}`, `${DEFAULT}` 提高灵活性
+
+**参考文档**:
+- `memory/patterns/config_driven_design.md` - 配置驱动设计模式
+- `tools/arch_rules.md` - 陈旧信息更新规则
+
 ## 文件说明
 
 ### config.json
