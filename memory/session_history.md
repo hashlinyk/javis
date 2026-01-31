@@ -70,3 +70,43 @@
 - 父仓库只追踪子模块的引用（commit hash）
 - 可以独立更新和提交每个项目
 - 克隆时可选地递归克隆子模块
+
+---
+
+### 2026-01-31 - 架构优化：跨平台配置系统
+
+**目标**: 解决符号链接的跨平台问题，支持环境迁移
+
+**完成的工作**:
+- 创建 `.javis/` 配置目录
+- 实现 `config.json` 配置文件
+- 开发 `load_config.py` 配置加载器（支持路径变量）
+- 创建 `submodule_manager.py` 子模块管理工具
+- 移动 `knowledge_base_update_rules.md` 到 `tools/arch_rules.md`
+- 更新 CLAUDE.md 支持配置初始化
+- 补充记忆系统知识库内容
+
+**重要决策**:
+- 放弃符号链接方案，改用配置驱动设计
+- 支持路径变量 `${CWD}`, `${HOME}`, `${DEFAULT}`
+- 使用 `load_config.py` 实现跨平台配置读取
+- 创建子模块管理工具简化 git submodule 操作
+
+**新增知识**:
+- Git Submodule 使用指南 (`memory/domain/programming/git_submodule.md`)
+- JARVIS 架构设计 (`memory/domain/system/javis_architecture.md`)
+- 配置驱动设计模式 (`memory/patterns/config_driven_design.md`)
+- 工作区设置最佳实践 (`memory/best_practices/workspace_setup.md`)
+- 架构演进经验记录 (`memory/experiences/architecture_evolution.md`)
+
+**架构变更**:
+- 新增: `.javis/` 配置目录
+- 新增: `tools/utilities/load_config.py`
+- 新增: `tools/automation/submodule_manager.py`
+- 移动: `memory/knowledge_base_update_rules.md` → `tools/arch_rules.md`
+- 修改: CLAUDE.md, JARVIS.md, 所有相关文档
+
+**跨平台支持**:
+- 配置文件驱动，无硬编码路径
+- 路径变量支持环境适配
+- 使用 pathlib 确保跨平台兼容

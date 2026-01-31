@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "workspace_path": "${CWD}",
+  "javis_projects_path": "${DEFAULT}",
+  "language": "zh-CN",
+  "session_mode": "javis-assistant",
+  "auto_backup": {
+    "enabled": true,
+    "schedule": "daily",
+    "max_backups": 7
+  }
+}

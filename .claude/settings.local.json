@@ -8,8 +8,6 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(mklink:*)",
-      "Bash(cmd.exe /c \"mklink /D javis_projects F:\\\\javis_projects\")",
       "Bash(powershell.exe:*)",
       "Bash(git submodule add:*)",
       "Bash(gh:*)",
@@ -22,7 +20,12 @@
       "Bash(git remote set-url:*)",
       "Bash(git rm:*)",
       "Bash(git clean:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(git remote get-url:*)",
+      "Bash(git submodule status:*)",
+      "Bash(readlink:*)",
+      "Bash(find:*)",
+      "Bash(python:*)"
     ]
   }
 }

@@ -10,6 +10,7 @@
 2. **结构化知识**: 使用层次化的分类系统组织信息
 3. **增量式成长**: 每次会话都向知识库添加新内容
 4. **可追溯性**: 记录决策历史和经验教训
+5. **跨平台支持**: 使用配置系统管理环境差异，不依赖硬编码路径
 
 ## 目录结构
 
@@ -18,7 +19,9 @@ workspace/                          # JARVIS 核心工作区（本仓库）
 ├── .claude/                       # Claude Code 配置
 │   └── settings.local.json
 ├── .git/                          # 工作区版本控制
-├── javis_projects -> F:\javis_projects  # 项目目录符号链接
+├── .javis/                        # JARVIS 配置
+│   ├── config.json                # 主配置文件
+│   └── README.md
 ├── memory/                        # 核心记忆模块
 │   ├── README.md
 │   ├── knowledge_base/            # 知识库索引系统
@@ -34,9 +37,11 @@ workspace/                          # JARVIS 核心工作区（本仓库）
 ├── skills/                        # Agent Skills 管理
 │   └── README.md
 ├── tools/                         # 工具集
-│   ├── automation/                # 自动化脚本
-│   ├── utilities/                 # 实用工具
-│   └── integration/               # 集成工具
+│   ├── README.md
+│   ├── arch_rules.md             # 架构规则
+│   ├── automation/               # 自动化脚本
+│   ├── utilities/                # 实用工具
+│   └── integration/              # 集成工具
 ├── CLAUDE.md                      # 会话启动提示
 └── JARVIS.md                      # 本文件
 
@@ -44,6 +49,7 @@ F:\javis_projects/                 # 独立的项目管理目录（使用 git su
 ├── .git/                          # 主仓库版本控制
 ├── .gitignore
 ├── .gitattributes
+├── .gitmodules                    # 子模块配置
 ├── README.md
 ├── references/                    # 参考文档
 │   └── AgentSkills介绍.md
@@ -53,6 +59,27 @@ F:\javis_projects/                 # 独立的项目管理目录（使用 git su
 │   └── project-name/             # 完成的项目
 └── templates/                     # 项目模板（可选，作为独立仓库）
 ```
+
+## 配置系统
+
+JARVIS 使用 `.javis/config.json` 配置文件管理环境设置，支持跨平台使用。
+
+### 配置文件位置
+
+- 主配置: `.javis/config.json`
+- 配置说明: `.javis/README.md`
+- 配置工具: `tools/utilities/load_config.py`
+
+### 环境变量
+
+配置文件支持以下路径变量：
+- `${CWD}` - 当前工作目录
+- `${HOME}` - 用户主目录
+- `${DEFAULT}` - 默认项目路径 (`${CWD}/../javis_projects`)
+
+### 跨环境适配
+
+在不同环境中使用时，只需修改配置文件中的路径即可，无需修改代码或文档。
 
 ## 工作流程
 

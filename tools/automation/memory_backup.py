@@ -2,7 +2,7 @@
 """
 记忆模块备份工具
 
-定期备份 memory/ 目录到 javis_projects 的 archive 目录。
+定期备份 memory/ 目录到 workspace 的 memory_backups 目录。
 """
 
 import os
@@ -10,10 +10,16 @@ import shutil
 import datetime
 from pathlib import Path
 
+# 导入配置加载器
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent / "utilities"))
+from load_config import JavisConfig
+
 def backup_memory():
     """备份记忆模块"""
-    workspace = Path("F:/workspace")
-    javis_projects = Path("F:/javis_projects")
+    # 使用配置系统获取路径
+    config = JavisConfig()
+    workspace = config.get_workspace_path()
 
     memory_dir = workspace / "memory"
     archive_dir = workspace / "memory_backups"
