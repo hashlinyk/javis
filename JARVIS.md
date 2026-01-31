@@ -40,16 +40,18 @@ workspace/                          # JARVIS 核心工作区（本仓库）
 ├── CLAUDE.md                      # 会话启动提示
 └── JARVIS.md                      # 本文件
 
-F:\javis_projects/                 # 独立的项目管理目录（外部，独立 git 仓库）
-├── .git/                          # 独立的版本控制
-├── .gitignore                     # 项目通用忽略规则
-├── .gitattributes                 # Git 属性配置
+F:\javis_projects/                 # 独立的项目管理目录（使用 git submodule）
+├── .git/                          # 主仓库版本控制
+├── .gitignore
+├── .gitattributes
 ├── README.md
 ├── references/                    # 参考文档
 │   └── AgentSkills介绍.md
-├── active/                        # 活跃项目（每个项目独立 git init）
-├── archive/                       # 归档项目
-└── templates/                     # 项目模板
+├── active/                        # 活跃项目（作为 git submodule）
+│   └── project-name/             # 每个项目是独立的 git 子模块
+├── archive/                       # 归档项目（作为 git submodule）
+│   └── project-name/             # 完成的项目
+└── templates/                     # 项目模板（可选，作为独立仓库）
 ```
 
 ## 工作流程
@@ -68,29 +70,60 @@ F:\javis_projects/                 # 独立的项目管理目录（外部，独�
 4. 重要经验教训 → 记录到 memory/experiences/
 
 #### 项目管理
-1. 通过 `javis_projects/` 符号链接访问项目目录
-2. 新项目创建在 `F:\javis_projects/active/` 中
-3. 每个项目独立 git 仓库，不与 javis_projects 主仓库混在一起
-4. javis_projects 的 .gitignore 忽略所有子项目的 .git 目录
-5. 完成后移动到 `F:\javis_projects/archive/` 中
+
+项目使用 **git submodule** 管理，每个项目都有独立的 git 仓库。
 
 #### 创建新项目
+
+**方法 1：从远程仓库添加**
 ```bash
 cd javis_projects/active
-mkdir my-project
-cd my-project
-git init
-# 添加文件并提交...
+git submodule add https://github.com/username/repo.git my-project
 ```
 
-#### 使用模板创建项目
+**方法 2：本地项目作为子模块**
 ```bash
-cp -r javis_projects/templates/basic javis_projects/active/my-project
-cd javis_projects/active/my-project
-rm README_TEMPLATE.md
+# 首先在本地初始化项目
+cd F:/somewhere/else
+mkdir my-new-project
+cd my-new-project
 git init
-git add .
-git commit -m "初始提交"
+# 添加文件并提交...
+
+# 然后添加为子模块
+cd F:/workspace/javis_projects/active
+git submodule add F:/somewhere/else/my-new-project my-new-project
+```
+
+#### 子模块常用命令
+
+```bash
+# 更新子模块到最新提交
+git submodule update --remote
+
+# 初始化并克隆所有子模块
+git submodule update --init --recursive
+
+# 查看子模块状态
+git submodule status
+
+# 移除子模块
+git submodule deinit my-project
+git rm my-project
+```
+
+#### 归档项目
+
+项目完成后，移动子模块到 `archive/`：
+
+```bash
+# 从 active 移除
+git submodule deinit active/my-project
+git rm active/my-project
+
+# 添加到 archive
+cd archive
+git submodule add <url-or-path> my-project
 ```
 
 ## 成长指标

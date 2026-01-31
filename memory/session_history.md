@@ -54,18 +54,19 @@
 
 ---
 
-### 2026-01-31 - 项目版本管理配置
+### 2026-01-31 - 项目管理改用 Submodule
 
-**目标**: 确保每个项目都有独立的 git 版本管理
+**目标**: 使用 git submodule 管理 javis_projects 中的项目
 
 **完成的工作**:
-- 更新 javis_projects/.gitignore 忽略子项目的 .git 目录
-- 更新 javis_projects/README.md 说明版本管理策略
-- 创建基本项目模板 (templates/basic/)
-- 添加模板使用说明
+- 回退之前的配置（独立 git 策略）
+- 改用 git submodule 管理项目
+- 更新 javis_projects/README.md 说明 submodule 使用方法
+- 更新 javis_projects/.gitignore 忽略 templates/
 - 更新工作区文档
 
-**版本管理策略**:
-- javis_projects 目录有自己的 git 仓库（追踪目录结构、模板、文档）
-- 每个子项目独立 git 仓库（.git 被父目录的 .gitignore 忽略）
-- 项目之间完全独立的版本控制
+**Submodule 优势**:
+- 每个项目有独立的 git 仓库和历史
+- 父仓库只追踪子模块的引用（commit hash）
+- 可以独立更新和提交每个项目
+- 克隆时可选地递归克隆子模块
