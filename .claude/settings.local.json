@@ -11,7 +11,18 @@
       "Bash(mklink:*)",
       "Bash(cmd.exe /c \"mklink /D javis_projects F:\\\\javis_projects\")",
       "Bash(powershell.exe:*)",
-      "Bash(git submodule add:*)"
+      "Bash(git submodule add:*)",
+      "Bash(gh:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(git config:*)",
+      "Bash(git remote remove:*)",
+      "Bash(git remote add origin:*)",
+      "Bash(ssh:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git rm:*)",
+      "Bash(git clean:*)",
+      "Bash(test:*)"
     ]
   }
 }

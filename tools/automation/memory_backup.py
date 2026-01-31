@@ -16,7 +16,7 @@ def backup_memory():
     javis_projects = Path("F:/javis_projects")
 
     memory_dir = workspace / "memory"
-    archive_dir = javis_projects / "archive" / "memory_backups"
+    archive_dir = workspace / "memory_backups"
 
     # 创建备份目录
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -6,7 +6,7 @@
 
 ### memory_backup.py
 
-记忆模块备份工具，定期备份 `memory/` 目录到 `F:\javis_projects\archive\memory_backups`。
+记忆模块备份工具，定期备份 `memory/` 目录到 `F:\workspace\memory_backups`。
 
 ```bash
 python tools/automation/memory_backup.py

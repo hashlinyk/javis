@@ -7,8 +7,7 @@
 ```
 knowledge_base/
 ├── index.md              # 本文件 - 知识库索引
-├── tags.md               # 标签系统（待建立）
-└── topics/              # 按主题分类的知识
+└── tags.md               # 标签系统
 ```
 
 ## 领域知识

@@ -7,7 +7,6 @@
 Agent Skills 是一种开放的格式，用于为智能代理提供新能力和专业知识。更多详细信息请参考：
 
 - **知识文档**: `../memory/domain/programming/agent_skills.md`
-- **原始文档**: `F:\javis_projects\references\AgentSkills介绍.md`
 
 ## 目录结构
 
