@@ -268,3 +268,118 @@ marriage-simulator/
 **预估清理效果**: 通过上述清理，估计可以释放 15-25GB 空间
 
 ---
+
+### 2026-02-23 - A股交易决策辅助系统开发
+
+**目标**: 创建自动化股票分析系统，提供新闻采集、技术分析和邮件通知功能
+
+**完成的工作**:
+- 按照 JARVIS 项目启动工作流程创建新项目
+- 创建 GitHub 仓库: https://github.com/hashlinyk/stock-trader
+- 添加为 git submodule 到 `javis_projects/active/stock-trader`
+- 实现完整的项目架构和功能模块
+
+**项目结构**:
+```
+stock-trader/
+├── .stock-trader/              # 配置目录（配置驱动设计）
+│   ├── config.json             # 主配置文件
+│   └── config.local.json       # 本地配置（邮箱授权码）
+├── src/
+│   ├── config/                 # 配置管理（继承JARVIS系统）
+│   ├── core/
+│   │   ├── data_sources/       # Akshare数据源封装
+│   │   ├── analysis/           # 技术分析（MACD/KDJ/RSI/布林带）
+│   │   ├── notifier/           # 邮件通知系统
+│   │   └── storage/            # 数据存储（预留）
+│   ├── scheduler/              # 任务调度器
+│   ├── cli/                    # 命令行工具
+│   └── utils/                  # 日志工具
+├── templates/email/            # Jinja2邮件模板
+└── scripts/                    # Windows运行脚本
+```
+
+**核心功能**:
+
+1. **数据采集模块** (`src/core/data_sources/`):
+   - `AkshareDataSource`: 实时行情、历史数据、指数数据
+   - `NewsSource`: 市场新闻、个股新闻、热门股票
+   - 实现5分钟数据缓存机制
+
+2. **技术分析模块** (`src/core/analysis/`):
+   - `TechnicalAnalyzer`: 计算MA、MACD、RSI、KDJ、布林带、ATR
+   - `SignalGenerator`: 生成买入/卖出/观察信号
+   - 趋势判断（多头/空头/震荡）
+
+3. **邮件通知模块** (`src/core/notifier/`):
+   - 四种HTML模板邮件:
+     - `news_digest.html` - 新闻摘要
+     - `signal_alert.html` - 交易信号警告
+     - `daily_report.html` - 每日报告
+     - `price_alert.html` - 价格预警
+   - 使用 yagmail + Jinja2 实现
+
+4. **任务调度器** (`src/scheduler/runner.py`):
+   - 新闻摘要: 每日 08:00, 12:00, 18:00
+   - 交易信号检查: 交易时段每30分钟
+   - 价格预警: 交易时段每5分钟
+   - 每日报告: 15:30（收盘后）
+   - 智能判断交易时间（仅工作日交易时段执行高频任务）
+
+5. **CLI工具** (`src/cli/commands.py`):
+   - `python -m src.cli quote <code>` - 查看实时行情
+   - `python -m src.cli news` - 获取最新新闻
+   - `python -m src.cli analyze <code>` - 技术分析
+   - `python -m src.cli test-email` - 发送测试邮件
+   - `python -m src.cli status` - 查看系统状态
+
+6. **Windows后台运行支持**:
+   - `install_task.ps1` - 任务计划程序（推荐）
+   - `install_service.py` - Windows服务
+   - `run_hidden.vbs` - 无窗口后台运行
+
+**技术栈**:
+- Python 3.12+
+- akshare: A股数据源
+- pandas-ta: 技术指标计算
+- yagmail: 邮件发送（163邮箱）
+- Jinja2: 邮件模板
+- schedule: 任务调度
+
+**配置管理**:
+- 继承 JARVIS 配置系统设计模式
+- 支持配置文件分层（config.json + config.local.json）
+- 路径动态解析，避免硬编码
+
+**用户邮箱配置**:
+- 收件人: lin_yuekai@163.com
+- SMTP: smtp.163.com:465
+- 需要配置163邮箱授权码
+
+**默认监控列表**:
+- 股票: 000001(平安银行), 000002(万科A), 600000(浦发银行), 600519(贵州茅台), 000858(五粮液)
+- 指数: 000001(上证指数), 399001(深证成指)
+
+**重要特性**:
+- 价格预警缓存机制（避免重复发送）
+- 交易时间智能判断
+- 完整的日志系统
+- 模块化设计便于扩展
+
+**部署步骤**:
+1. 安装依赖: `pip install -r requirements.txt`
+2. 配置邮箱授权码到 `.stock-trader/config.local.json`
+3. 初始化系统: `python -m src.main init`
+4. 测试配置: `python -m src.main test`
+5. 启动守护进程: `python -m src.main daemon`
+
+**仓库地址**:
+- https://github.com/hashlinyk/stock-trader
+
+**待优化**:
+- 添加数据持久化（SQLite存储历史数据）
+- 实现更多技术指标
+- 支持多邮箱通知
+- 添加Web界面
+
+---
