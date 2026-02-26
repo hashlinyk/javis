@@ -306,5 +306,7 @@ def get_color_class(change_percent: float) -> str:
 ## 相关项目
 
 - stock-trader: A股交易决策辅助系统
+  - 包含完整的Web可视化界面
   - 位置: `javis_projects/active/stock-trader`
   - 仓库: https://github.com/hashlinyk/stock-trader
+
