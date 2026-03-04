@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: This XML file does not appear to have any style information associated with it. The document tree is shown below.
+  - generic [ref=e4]:
+    - generic [ref=e7]:
+      - text: <krpano
+      - generic [ref=e8]: version="1.21"
+      - generic [ref=e9]: title="Virtual Tour"
+      - text: ">"
+    - generic [ref=e10]:
+      - generic [ref=e12]:
+        - text: <view
+        - generic [ref=e13]: hlookat="56.0"
+        - generic [ref=e14]: vlookat="0.0"
+        - generic [ref=e15]: fovtype="MFOV"
+        - generic [ref=e16]: fov="120"
+        - generic [ref=e17]: maxpixelzoom="1.0"
+        - generic [ref=e18]: fovmin="70"
+        - generic [ref=e19]: fovmax="140"
+        - generic [ref=e20]: limitview="auto"
+        - text: />
+      - generic [ref=e22]:
+        - text: <preview
+        - generic [ref=e23]: url="https://pfm.bigpixel.cn/new_public/tilesource/budalagong/panos/bu.tiles/preview.jpg"
+        - text: />
+      - generic [ref=e24]:
+        - generic [ref=e27]: <image>
+        - generic [ref=e30]:
+          - text: <cube
+          - generic [ref=e31]: url="https://pfm.bigpixel.cn/new_public/tilesource/budalagong/panos/bu.tiles/%s/l0%l/%v/l0%l_%s_%v_%h.jpg"
+          - generic [ref=e32]: multires="512,640,1152,2304,4736,9472,19072,38144,76416,152832"
+          - text: />
+        - generic [ref=e34]: </image>
+    - generic [ref=e36]: </krpano>

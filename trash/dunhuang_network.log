@@ -1,0 +1,27 @@
+[GET] https://rumt-zh.com/collect/pv?originFrom=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&id=ZtUfTXRVxgqBoUqzrW&uin=&version=1.43.51&aid=3da09c29-f8ce-4b7d-96e4-722f3080f062&env=production&platform=3&netType=4&vp=852%20*%20932&sr=1707%20*%201067&sessionId=session-a6d63895ce9f4aabba78c6e9c670acda&from=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&referer= => [204] 
+[GET] https://servicewechat.com/ob/getwxobmetadata => [200] OK
+[GET] https://dha-zhanlan-0gck1rr58ccf5639-1321012104.tcloudbaseapp.com/virtual/assets/285-16k.6a2cb2e1.jpg => [200] 
+[GET] https://dha-zhanlan-0gck1rr58ccf5639-1321012104.tcloudbaseapp.com/virtual/assets/fire.db4e8037.svg => [200] 
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://rumt-zh.com/collect/whitelist?id=ZtUfTXRVxgqBoUqzrW&uin=&version=1.43.51&aid=3da09c29-f8ce-4b7d-96e4-722f3080f062&env=production&platform=3&netType=4&vp=852%20*%20932&sr=1707%20*%201067&sessionId=session-a6d63895ce9f4aabba78c6e9c670acda&from=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&referer= => [200] 
+[POST] https://servicewechat.com/ob/objectexist => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[POST] https://rumt-zh.com/collect?from=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&id=ZtUfTXRVxgqBoUqzrW&uin=&version=1.43.51&aid=3da09c29-f8ce-4b7d-96e4-722f3080f062&env=production&platform=3&netType=4&vp=852%20*%20932&sr=1707%20*%201067&sessionId=session-a6d63895ce9f4aabba78c6e9c670acda&referer= => [204] 
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://rumt-zh.com/speed/performance?dnsLookup=9&tcp=26&ssl=16&ttfb=29&contentDownload=2&domParse=366&resourceDownload=1159&firstScreenTiming=759&from=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&id=ZtUfTXRVxgqBoUqzrW&uin=&version=1.43.51&aid=3da09c29-f8ce-4b7d-96e4-722f3080f062&env=production&platform=3&netType=4&vp=852%20*%20932&sr=1707%20*%201067&sessionId=session-a6d63895ce9f4aabba78c6e9c670acda&referer=& => [204] 
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK
+[POST] https://rumt-zh.com/speed?from=https%3A%2F%2F285.e-dunhuang.com%2F%23%2F&id=ZtUfTXRVxgqBoUqzrW&uin=&version=1.43.51&aid=3da09c29-f8ce-4b7d-96e4-722f3080f062&env=production&platform=3&netType=4&vp=852%20*%20932&sr=1707%20*%201067&sessionId=session-a6d63895ce9f4aabba78c6e9c670acda&referer= => [204] 
+[GET] https://servicewechat.com/ob/getcloudstoragefederationtoken => [200] OK
+[POST] https://servicewechat.com/ob/sdkmonitor => [200] OK

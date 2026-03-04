@@ -1,0 +1,46 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img [ref=e4]
+    - heading "加载中..." [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - generic [ref=e10]:
+      - generic [ref=e11]: "48"
+      - generic [ref=e12]: 在线人数
+    - generic [ref=e13]:
+      - generic: 本三维场景模型依据清代紫禁城史料所制
+      - link "联系方式：pano@dpm.org.cn" [ref=e14] [cursor=pointer]:
+        - /url: mailto:pano@dpm.org.cn
+      - generic:
+        - generic [ref=e19] [cursor=pointer]: 慈宁宫
+        - generic [ref=e23] [cursor=pointer]: 养心殿
+        - generic [ref=e27] [cursor=pointer]: 乾清宫
+        - generic [ref=e31] [cursor=pointer]: 延禧宫
+        - generic [ref=e35] [cursor=pointer]: 皇极殿
+        - generic [ref=e39] [cursor=pointer]: 武英殿
+        - generic [ref=e43] [cursor=pointer]: 太和殿
+        - generic [ref=e47] [cursor=pointer]: 文华殿
+        - generic [ref=e51] [cursor=pointer]: 御花园
+        - generic [ref=e55] [cursor=pointer]: 午门
+    - generic [ref=e62]: "668917"
+    - generic [ref=e68]:
+      - textbox "请输入关键词：太和殿" [ref=e73]
+      - generic [ref=e74] [cursor=pointer]:
+        - text: 中
+        - generic [ref=e75]: 
+    - generic:
+      - generic [ref=e79] [cursor=pointer]: 故宫概览
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - paragraph [ref=e90] [cursor=pointer]: 故宫 博物院
+          - paragraph [ref=e93] [cursor=pointer]: 外朝
+          - paragraph [ref=e96] [cursor=pointer]: 内廷
+        - generic [ref=e98]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: 故宫博物院
+            - img [ref=e102]:
+              - generic [ref=e103]: THE PALACE MUSEUM
+            - generic [ref=e106]: 故宫博物院,是一座特殊的博物馆。成立于1925年的故宫博物院，建立在明清两朝皇宫--紫禁城的基础上。 故宫博物院拥有绝无仅有的独特藏品，是世界上规模最大、保存最完整的木结构宫殿建筑群。它是中华民族的骄傲所在，也是全人类的珍贵文化遗产。如今，昔日皇宫禁地那占地112万平方米的重重宫阙，既是收藏明清皇室珍宝的巨大宝库，也是记载明清宫廷历史的鲜活档案。 紫禁城南北长961米，东西宽753米，四面围有高10米的城墙，城外有宽52米的护城河,真可谓有金城汤池之固。紫禁城有四座城门，南面为午门，北面为神武门，东面为东华门，西面为西华门。城墙的四角，各有一座风姿绰约的角楼，民间有九梁十八柱七十二条脊之说，形容其结构的复杂。 紫禁城内的建筑分为外朝和内廷两部分。外朝的中心为太和殿、中和殿、保和殿，统称三大殿，是国家举行大典礼的地方。三大殿左右两翼辅以文华殿、武英殿两组建筑。内廷的中心是乾清宫、交泰殿、坤宁宫，统称后三宫，是皇帝和皇后居住的正宫。其后为御花园。后三宫两侧排列着东、西六宫，是后妃们居住休息的地方。东六宫东侧是天穹宝殿等佛堂建筑，西六宫西侧是中正殿等佛堂建筑。外朝、内廷之外还有外东路、外西路两部分建筑。
+          - generic [ref=e109]:
+            - img [ref=e110]
+            - img [ref=e111]
+            - img [ref=e112]

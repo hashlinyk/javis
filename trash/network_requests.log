@@ -1,0 +1,12 @@
+[GET] http://localhost:5000/api/indices => [200] OK
+[GET] http://localhost:5000/api/watchlist => [200] OK
+[GET] http://localhost:5000/api/signals => [200] OK
+[GET] http://localhost:5000/api/news?limit=15 => [200] OK
+[GET] http://localhost:5000/api/indices => [200] OK
+[GET] http://localhost:5000/api/watchlist
+[GET] http://localhost:5000/api/signals => [200] OK
+[GET] http://localhost:5000/api/news?limit=15 => [200] OK
+[GET] http://localhost:5000/api/indices
+[GET] http://localhost:5000/api/watchlist
+[GET] http://localhost:5000/api/signals => [200] OK
+[GET] http://localhost:5000/api/news?limit=15 => [200] OK
