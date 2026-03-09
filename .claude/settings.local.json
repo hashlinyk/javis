@@ -55,7 +55,8 @@
       "Bash(npm config:*)",
       "Bash(pip show:*)",
       "Bash(pip cache:*)",
-      "Bash(pip uninstall:*)"
+      "Bash(pip uninstall:*)",
+      "Bash(pip install:*)"
     ]
   }
 }
